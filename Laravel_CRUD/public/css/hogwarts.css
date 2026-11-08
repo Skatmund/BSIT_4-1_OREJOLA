@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&display=swap');
+
+:root {
+    --forest: #17251f;
+    --forest-light: #263b30;
+    --gold: #b99a58;
+    --gold-light: #d8bb7a;
+    --parchment: #eee5cf;
+    --parchment-dark: #ded0ae;
+    --ink: #30251f;
+    --muted: #776b57;
+    --red: #783c36;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at top, #35483b 0%, transparent 65%),
+        #101a15;
+    color: var(--ink);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 17px;
+}
+
+.topbar {
+    background: var(--forest);
+    border-bottom: 2px solid var(--gold);
+    padding: 22px 30px;
+    text-align: center;
+}
+
+.topbar h1 {
+    color: var(--gold-light);
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.topbar p {
+    color: var(--parchment);
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin: 7px 0 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: #202e26;
+    padding: 13px;
+    border-bottom: 1px solid #8b7446;
+}
+
+.navigation a {
+    color: var(--parchment);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.navigation a:hover {
+    color: var(--gold-light);
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 45px auto;
+    padding: 35px;
+    background: var(--parchment);
+    border: 3px double var(--gold);
+    box-shadow: 0 12px 40px #0008;
+}
+
+.page-title {
+    font-family: 'Cinzel', serif;
+    font-size: 27px;
+    color: var(--forest);
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: var(--muted);
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid var(--gold);
+    margin: 22px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 17px;
+    border: 1px solid var(--gold);
+    text-decoration: none;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.add {
+    background: var(--forest);
+    color: var(--gold-light);
+}
+
+.edit {
+    background: #66512e;
+    color: white;
+}
+
+.delete {
+    background: var(--red);
+    color: white;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+    transform: translateY(-1px);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: var(--forest);
+    color: var(--gold-light);
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 15px 12px;
+    text-align: left;
+}
+
+td {
+    padding: 13px 12px;
+    border-bottom: 1px solid var(--parchment-dark);
+}
+
+tbody tr:hover {
+    background: #e3d8bd;
+}
+
+.actions {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.actions .btn {
+    padding: 6px 11px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: var(--forest);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b9a77f;
+    background: #f8f1df;
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 17px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px #b99a5833;
+}
+
+.success {
+    padding: 13px;
+    background: #dce5d4;
+    border-left: 4px solid var(--forest-light);
+    color: var(--forest);
+    margin: 20px 0;
+}
+
+.error-list {
+    background: #f1d9d4;
+    color: #782e27;
+    padding: 15px 35px;
+}
+
+.empty {
+    text-align: center;
+    padding: 30px;
+    color: var(--muted);
+    font-style: italic;
+}
+
+.footer {
+    text-align: center;
+    color: var(--gold-light);
+    padding: 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 18px;
+        margin: 25px auto;
+    }
+
+    .topbar h1 {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    .navigation {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .page-title {
+        font-size: 21px;
+    }
+
+    .actions {
+        flex-wrap: wrap;
+    }
+}
